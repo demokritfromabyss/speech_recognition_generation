@@ -1,0 +1,24 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/212 [00:00<?, ?it/s]Loading weights: 100%|██████████| 212/212 [00:00<00:00, 54222.36it/s]
+[1mWav2Vec2ForCTC LOAD REPORT[0m from: facebook/wav2vec2-base-100h
+Key                           | Status     | 
+------------------------------+------------+-
+wav2vec2.mask_time_emb_vector | UNEXPECTED | 
+wav2vec2.masked_spec_embed    | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+{
+  "data_dir": "data/earnings22_test",
+  "method": "greedy",
+  "beam_width": 10,
+  "alpha": 0.5,
+  "beta": 0.5,
+  "temperature": 1.5,
+  "lm_model_path": null,
+  "n_samples": 200,
+  "wer": 0.5496987951807228,
+  "cer": 0.25578503460207613,
+  "avg_sample_time_sec": 0.13684519052505492
+}
